@@ -11,6 +11,7 @@ body {
 }
 
 .items {
+	dispaly:block;
     position: relative;
     width: 600px;
     height: 400px;
