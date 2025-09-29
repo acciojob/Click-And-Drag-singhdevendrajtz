@@ -24,8 +24,8 @@ body {
   width: 100%;
   border: 1px solid white;
   /* overflow-x: scroll; */
-	  overflow-x: auto;
-		overflow-y:auto;
+	  overflow-x: scroll-bar;
+		overflow-y:scrollbar;
   white-space: nowrap; /* Prevents content from wrapping */
   /* overflow-y: scroll;
   white-space: nowrap; */
