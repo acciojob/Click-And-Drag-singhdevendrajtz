@@ -21,12 +21,13 @@ body {
 .items {
   height: 800px;
   padding: 100px;
-  width: 100%;
+  
+	width: 300px; /* A fixed width to trigger overflow */
+  overflow-x: auto; /* Adds a horizontal scrollbar when content overflows */
+  white-space: nowrap; /* Prevents child items from wrapping */
   border: 1px solid white;
   /* overflow-x: scroll; */
-	  overflow-x: scroll-bar;
-		overflow-y:scrollbar;
-  white-space: nowrap; /* Prevents content from wrapping */
+ /* Prevents content from wrapping */
   /* overflow-y: scroll;
   white-space: nowrap; */
   user-select: none;
@@ -48,9 +49,10 @@ body {
 }
 
 .item {
-  width: 200px;
+	  display: inline-block; /* Allows items to sit side-by-side */
+  width: 150px; /* Each item's width */
   height: calc(100% - 40px);
-  display: inline-flex;
+
   align-items: center;
   justify-content: center;
   font-size: 80px;
