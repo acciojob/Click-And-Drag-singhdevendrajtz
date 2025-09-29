@@ -1,15 +1,37 @@
-.items{
-	
-	display:grid;
-	grid-template-rows:40px 40px 40px;
-	grid-template-columns:40px 40px;
-	grid-gap:2px;
-	height:50vh;
-	width:50vw;
-	border:solid 1px black;	
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
-.cubes{
-	/* position:absolute; */
-	position:relative;
-	border:solid black 1px;
-		}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  background-color: #fff;
+  position: relative; /* Crucial for constraining the cube movement */
+}
+
+.cubes {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+  cursor: grab;
+  position: relative; /* Allows positioning within the grid and for dragging */
+  transition: transform 0.1s ease-out; /* Smooths the drag animation */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cubes.dragging {
+  cursor: grabbing;
+  z-index: 1000; /* Bring the dragged cube to the top */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
