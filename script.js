@@ -1,7 +1,7 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.items');
-    const cubes = document.querySelectorAll('.cubes');
+    const cubes = document.querySelectorAll('.item');
     
     let activeCube = null;
     let offsetX, offsetY;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         // Check if the mousedown event was on a cube
-        if (e.target.classList.contains('cubes')) {
+        if (e.target.classList.contains('item')) {
             activeCube = e.target;
             activeCube.classList.add('dragging');
 
