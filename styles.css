@@ -23,7 +23,7 @@ body {
   padding: 100px;
   
 	width: 300px; /* A fixed width to trigger overflow */
-  overflow-x: auto; /* Adds a horizontal scrollbar when content overflows */
+  overflow-x: scroll; /* Adds a horizontal scrollbar when content overflows */
   white-space: nowrap; /* Prevents child items from wrapping */
   border: 1px solid white;
   /* overflow-x: scroll; */
