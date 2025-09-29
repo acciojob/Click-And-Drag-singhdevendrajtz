@@ -2,7 +2,7 @@
 // Get the container and items
 const container = document.querySelector('.items');
 const items = document.querySelectorAll('.item');
-container.scrollLeft = 2;
+container[0].scrollLeft="10"
 // Adjust container to grid layout for initial grid formation
 container.style.display = 'grid';
 container.style.gridTemplateColumns = 'repeat(5, 120px)';
